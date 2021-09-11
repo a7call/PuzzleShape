@@ -12,7 +12,7 @@ public class PickUp : MonoBehaviour
     {
         formeComestible = GetComponent<MeshFilter>().mesh;
         /**InstantiateComestible();**/
-        InvokeRepeating("ApparaitreComestible", 0, 5.0f);
+        /**InvokeRepeating("ApparaitreComestible", 0, 5.0f);**/
     }
     void Update()
     {
@@ -29,11 +29,7 @@ public class PickUp : MonoBehaviour
 
     void ApparaitreComestible()
     {
-        if(comestible != null)
-        {
-            Rigidbody instance = Instantiate(comestible);
-        }
-            
+        Rigidbody instance = Instantiate(comestible);
     }
     /**void InstantiateComestible()
     {
