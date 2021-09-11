@@ -29,7 +29,10 @@ public class PickUp : MonoBehaviour
 
     void ApparaitreComestible()
     {
-        Rigidbody instance = Instantiate(comestible);
+        if (comestible != null)
+        {
+            Rigidbody instance = Instantiate(comestible);
+        }
     }
     /**void InstantiateComestible()
     {
