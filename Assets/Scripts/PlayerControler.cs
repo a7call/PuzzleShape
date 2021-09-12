@@ -74,6 +74,8 @@ public class PlayerControler : MonoBehaviour
             other.gameObject.SetActive(false);
             count++;
             SetCountText();
+            //GetComponent<MeshCollider>().sharedMesh = other.GetComponent<MeshFilter>().mesh;
+            
         }
            
     }
