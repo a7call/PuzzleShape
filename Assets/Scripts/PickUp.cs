@@ -6,6 +6,7 @@ public class PickUp : MonoBehaviour
 {
     private Mesh formeComestible;
     public Rigidbody comestible;
+    public GameObject spawnPoint;
     
 
     private void Start()
@@ -17,6 +18,7 @@ public class PickUp : MonoBehaviour
     void Update()
     {
         transform.Rotate(new Vector3(50, 30, 45) * Time.deltaTime);
+        ApparaitreComestible();
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,6 +33,7 @@ public class PickUp : MonoBehaviour
     {
         if (comestible != null)
         {
+            transform.position = spawnPoint.transform.position;
             Rigidbody instance = Instantiate(comestible);
         }
     }
