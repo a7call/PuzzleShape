@@ -112,6 +112,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   comestible: {fileID: 0}
   spawnPoint: {fileID: 0}
+  shape: 2
 --- !u!54 &7603742485286973095
 Rigidbody:
   m_ObjectHideFlags: 0
