@@ -7,6 +7,7 @@ public class PickUp : MonoBehaviour
     private Mesh formeComestible;
     public Rigidbody comestible;
     public GameObject spawnPoint;
+    public Shapes shape;
     
 
     private void Start()
@@ -25,6 +26,7 @@ public class PickUp : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             other.GetComponent<MeshFilter>().mesh = formeComestible;
+            other.GetComponent<PlayerControler>().currentShape = shape;
         }
     }
 

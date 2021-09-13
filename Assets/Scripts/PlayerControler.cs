@@ -17,6 +17,8 @@ public class PlayerControler : MonoBehaviour
     public TextMeshProUGUI countText;
     public GameObject winTextObject;
 
+    public Shapes currentShape;
+
     void Start()
     {
         rb = GetComponent<Rigidbody>();

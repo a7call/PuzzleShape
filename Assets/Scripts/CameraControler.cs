@@ -7,8 +7,8 @@ public class CameraControler : MonoBehaviour
     private Vector3 offset;
     [SerializeField] private GameObject player;
 
-    private List<Walls> wallsInFov = new List<Walls>();
-    private List<Walls> transparentWalls = new List<Walls>();
+    private List<FovObjects> objectInFov = new List<FovObjects>();
+    private List<FovObjects> transparentObject = new List<FovObjects>();
     void Start()
     {
         offset = new Vector3(12, 12, -12);
@@ -22,7 +22,7 @@ public class CameraControler : MonoBehaviour
         LookForObjectInFOV();
         SetWallsToTransparent();
         SetWallsToSolid();
-        wallsInFov.Clear();
+        objectInFov.Clear();
     }
 
     void LookForObjectInFOV()
@@ -33,20 +33,20 @@ public class CameraControler : MonoBehaviour
 
         foreach(var hit in hits)
         {
-            if(hit.transform.TryGetComponent<Walls>(out Walls wall))
+            if(hit.transform.TryGetComponent(out FovObjects fovObject))
             {
-                wallsInFov.Add(wall);
+                objectInFov.Add(fovObject);
             }
         }
     }
 
     void SetWallsToTransparent()
     {
-        foreach(var wall in wallsInFov.ToArray())
+        foreach(var wall in objectInFov.ToArray())
         {
-            if (!transparentWalls.Contains(wall))
+            if (!transparentObject.Contains(wall))
             {
-                transparentWalls.Add(wall);
+                transparentObject.Add(wall);
                 wall.TurnToTransparent();
                
             }
@@ -55,12 +55,12 @@ public class CameraControler : MonoBehaviour
 
     void SetWallsToSolid()
     {
-        foreach(var wall in transparentWalls.ToArray())
+        foreach(var fovObject in transparentObject.ToArray())
         {
-            if (!wallsInFov.Contains(wall))
+            if (!objectInFov.Contains(fovObject))
             {
-                transparentWalls.Remove(wall);
-                wall.TurnToSolid();
+                transparentObject.Remove(fovObject);
+                fovObject.TurnToSolid();
                 
             }
         }

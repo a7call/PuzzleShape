@@ -1,8 +1,8 @@
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 
-public class Walls : MonoBehaviour
+
+public class FovObjects : MonoBehaviour
 {
     public Material solidMaterial;
     public Material transparentMaterial;
@@ -23,4 +23,5 @@ public class Walls : MonoBehaviour
     {
         meshRenderer.material = transparentMaterial;
     }
+
 }
