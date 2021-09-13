@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2973105633734628944, guid: 29cc50b48eb7ee84db7623e3d6e3e8b0, type: 3}
       propertyPath: m_Name
-      value: PickUpRond
+      value: PickUpRond Variant
       objectReference: {fileID: 0}
     - target: {fileID: 2973105633734628947, guid: 29cc50b48eb7ee84db7623e3d6e3e8b0, type: 3}
       propertyPath: m_Mesh
@@ -58,6 +58,10 @@ PrefabInstance:
     - target: {fileID: 2973105633734628948, guid: 29cc50b48eb7ee84db7623e3d6e3e8b0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2973105633734628949, guid: 29cc50b48eb7ee84db7623e3d6e3e8b0, type: 3}
+      propertyPath: shape
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29cc50b48eb7ee84db7623e3d6e3e8b0, type: 3}
