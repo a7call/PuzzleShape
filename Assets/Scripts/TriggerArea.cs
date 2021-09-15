@@ -11,7 +11,6 @@ public class TriggerArea : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            print(other.GetComponent<MeshFilter>().mesh);
             if (other.GetComponent<PlayerControler>().currentShape == connectedDoor.GetComponent<Door>().doorShape)
                 GameEvents.current.DoorwayTriggerEnter(id);
         }
