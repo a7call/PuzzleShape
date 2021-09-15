@@ -6,7 +6,8 @@ public enum Shapes
 {
     Sphere,
     Cube,
-    Prisme
+    Prisme,
+    Ressort
 }
 public class Door : MonoBehaviour
 {
@@ -30,7 +31,7 @@ public class Door : MonoBehaviour
 
         if (!isOpen && id == this.id)
         {
-            LeanTween.moveLocalY(gameObject, 2.5f, 1f);
+            LeanTween.moveLocalY(gameObject, -2.5f, 1f);
             isOpen = true;
         }    
     }

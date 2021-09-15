@@ -5,8 +5,6 @@ using UnityEngine;
 public class PickUp : MonoBehaviour
 {
     private Mesh formeComestible;
-    public Rigidbody comestible;
-    public GameObject spawnPoint;
     public Shapes shape;
     
 
@@ -17,8 +15,7 @@ public class PickUp : MonoBehaviour
     }
     void Update()
     {
-        transform.Rotate(new Vector3(50, 30, 45) * Time.deltaTime);
-        
+        transform.Rotate(new Vector3(50, 30, 45) * Time.deltaTime);       
     }
 
     private void OnTriggerEnter(Collider other)

@@ -12,19 +12,11 @@ public class PlayerControler : MonoBehaviour
     private float movementX;
     private float movementY;
     public bool isIsometric = false;
-
-    private int count;
-    public TextMeshProUGUI countText;
-    public GameObject winTextObject;
-
     public Shapes currentShape;
 
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        count = 0;
-        SetCountText();
-        winTextObject.SetActive(false);
     }
 
     void OnMove(InputValue movementValue)
@@ -60,22 +52,11 @@ public class PlayerControler : MonoBehaviour
         rb.AddForce(movement *speed* Time.fixedDeltaTime);
     }
 
-    void SetCountText()
-    {
-        countText.text = "Count: " + count.ToString();
-
-        if (count >= 9)
-            winTextObject.SetActive(true);
-
-    }
-
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("PickUp"))
         {
             other.gameObject.SetActive(false);
-            count++;
-            SetCountText();
             //GetComponent<MeshCollider>().sharedMesh = other.GetComponent<MeshFilter>().mesh;
             
         }
