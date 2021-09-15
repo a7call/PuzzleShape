@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6598270295612635416}
   - component: {fileID: 6568104723777267434}
   - component: {fileID: 6612747190134011787}
+  - component: {fileID: 6957495004162803204}
   m_Layer: 0
   m_Name: DoorWallDouble
   m_TagString: Untagged
@@ -8231,3 +8232,17 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
+--- !u!114 &6957495004162803204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6611301582333813572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f44e9b871d8b7f4e9c9b18d7f94d9cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  solidMaterial: {fileID: 2100000, guid: 4930c6ffa5b9b9f4098249a43abf8506, type: 2}
+  transparentMaterial: {fileID: 2100000, guid: 1e3f4dd6698853844b8cab4c33a09c96, type: 2}
