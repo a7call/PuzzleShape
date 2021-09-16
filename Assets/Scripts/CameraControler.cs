@@ -11,6 +11,7 @@ public class CameraControler : MonoBehaviour
     private List<FovObjects> transparentObject = new List<FovObjects>();
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         offset = new Vector3(12, 12, -12);
        // offset = transform.position - player.transform.position;
     }

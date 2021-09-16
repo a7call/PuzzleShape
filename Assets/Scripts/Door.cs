@@ -7,7 +7,8 @@ public enum Shapes
     Sphere,
     Cube,
     Prisme,
-    Ressort
+    Ressort, 
+    None
 }
 public class Door : MonoBehaviour
 {
@@ -20,6 +21,11 @@ public class Door : MonoBehaviour
         GameEvents.current.onDoorwayTriggerExit += OnDoorWayClose;      
     }
 
+    private void OnDisable()
+    {
+        GameEvents.current.onDoorwayTriggerEnter -= OnDoorWayOpen;
+        GameEvents.current.onDoorwayTriggerExit -= OnDoorWayClose;
+    }
     // Update is called once per frame
     void Update()
     {

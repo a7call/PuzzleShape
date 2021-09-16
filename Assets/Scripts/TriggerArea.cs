@@ -5,13 +5,19 @@ using UnityEngine;
 public class TriggerArea : MonoBehaviour
 {
     public int id;
+    public bool isButtonActivated;
     public GameObject connectedDoor;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
+
             if (other.GetComponent<PlayerControler>().currentShape == connectedDoor.GetComponent<Door>().doorShape)
+                GameEvents.current.DoorwayTriggerEnter(id);
+
+
+            if (isButtonActivated)
                 GameEvents.current.DoorwayTriggerEnter(id);
         }
     }
