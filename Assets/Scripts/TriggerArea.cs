@@ -5,19 +5,21 @@ using UnityEngine;
 public class TriggerArea : MonoBehaviour
 {
     public int id;
-    public bool isButtonActivated;
+    public bool isTriggerActivated = true;
     public GameObject connectedDoor;
 
+    private void Start()
+    {
+        SetTriggerArea(connectedDoor.GetComponent<Door>().isLocked);
+    }
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
-
-            if (other.GetComponent<PlayerControler>().currentShape == connectedDoor.GetComponent<Door>().doorShape)
+            if(connectedDoor.GetComponent<Door>().doorShape == Shapes.None && isTriggerActivated)
                 GameEvents.current.DoorwayTriggerEnter(id);
 
-
-            if (isButtonActivated)
+            if (other.GetComponent<PlayerControler>().currentShape == connectedDoor.GetComponent<Door>().doorShape && isTriggerActivated)
                 GameEvents.current.DoorwayTriggerEnter(id);
         }
     }
@@ -26,5 +28,12 @@ public class TriggerArea : MonoBehaviour
     {
         if (other.CompareTag("Player"))
             GameEvents.current.DoorwayTriggerExit(id);
+    }
+    public void SetTriggerArea(bool isLocked)
+    {
+        if (isLocked)
+            isTriggerActivated = false;
+        else
+            isTriggerActivated = true;
     }
 }

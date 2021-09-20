@@ -110,9 +110,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2633fd09347e6374fb897810c5edf756, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  comestible: {fileID: 0}
-  spawnPoint: {fileID: 0}
   shape: 2
+  unActivatedMat: {fileID: 2100000, guid: 6615f1708a4932646adcdc55932feefa, type: 2}
+  activatedMat: {fileID: 2100000, guid: 6968e89851431104b8f931c37d69356b, type: 2}
 --- !u!54 &7603742485286973095
 Rigidbody:
   m_ObjectHideFlags: 0

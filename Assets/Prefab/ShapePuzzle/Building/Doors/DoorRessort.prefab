@@ -72,6 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1
+  isButtonActivated: 1
   connectedDoor: {fileID: 7116010023228540266}
 --- !u!1 &7116398504443747976
 GameObject:

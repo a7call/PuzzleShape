@@ -52,14 +52,4 @@ public class PlayerControler : MonoBehaviour
         rb.AddForce(movement *speed* Time.fixedDeltaTime);
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("PickUp"))
-        {
-            other.gameObject.SetActive(false);
-            //GetComponent<MeshCollider>().sharedMesh = other.GetComponent<MeshFilter>().mesh;
-            
-        }
-           
-    }
 }

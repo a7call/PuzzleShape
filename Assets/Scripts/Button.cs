@@ -4,30 +4,66 @@ using UnityEngine;
 
 public class Button : MonoBehaviour
 {
-    private Animator animator;
-    public GameObject linkedDoor;
     public Material activatedMaterial;
+    private Material baseMaterial;
+
+    private Animator animator;
+
+    public List<GameObject> linkedDoors;
+    public List<GameObject> linkedSpawners;
+
+    private bool hasBeenPushed;
+    private bool isResting;
+
     private void Start()
-    {      
-        animator = GetComponent<Animator>();      
+    {
+        baseMaterial = transform.GetChild(0).GetComponent<MeshRenderer>().material;
+        animator = GetComponent<Animator>();
+        foreach (var door in linkedDoors)
+            door.GetComponentInChildren<TriggerArea>().isTriggerActivated = false;
     }
     private void OnCollisionEnter(Collision collision)
     {
+        if (isResting)
+            return;
+
         if (collision.transform.CompareTag("Player"))
         {
             animator.SetTrigger("ButtonPushTrigger");
 
-            transform.GetChild(0).GetComponent<MeshRenderer>().material = activatedMaterial;
-
-            if (linkedDoor == null)
-            {
-                Debug.LogWarning("No Doors Are Associated With This Button");
-                return;
-            }
-               
-            linkedDoor.GetComponentInChildren<Door>().GetComponent<MeshRenderer>().material = activatedMaterial;
-            linkedDoor.GetComponentInChildren<TriggerArea>().isButtonActivated = true;
-
+            ToggleMecanisme(hasBeenPushed);
+            hasBeenPushed = !hasBeenPushed;
+            StartCoroutine(RestCo());
         }
+
+
+    }
+    private IEnumerator RestCo()
+    {
+        isResting = true;
+        yield return new WaitForSeconds(1f);
+        isResting = false;
+    }
+
+    private void ToggleMecanisme(bool hasBeenPushed)
+    {
+        if (!hasBeenPushed)
+        {
+            transform.GetChild(0).GetComponent<MeshRenderer>().material = activatedMaterial;
+        }
+        else
+        {
+            transform.GetChild(0).GetComponent<MeshRenderer>().material = baseMaterial;
+        }
+
+        foreach (var door in linkedDoors)
+        {
+            var triggerArea = door.GetComponentInChildren<TriggerArea>();
+            door.GetComponentInChildren<Door>().ToggleDoorState(triggerArea);
+        }
+
+        foreach (var spanwer in linkedSpawners)
+            spanwer.GetComponent<ShapeSpawner>().ToggleState();
+
     }
 }

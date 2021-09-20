@@ -110,3 +110,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shape: 3
+  unActivatedMat: {fileID: 2100000, guid: 2425c03ff18262a4eaa45371f0fe6dcf, type: 2}
+  activatedMat: {fileID: 2100000, guid: 6968e89851431104b8f931c37d69356b, type: 2}

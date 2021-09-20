@@ -131,8 +131,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 258e8547758f502429064f31f26f6dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  linkedDoor: {fileID: 0}
-  activatedMaterial: {fileID: 2100000, guid: f685a57b9da560a448bb95374a652f90, type: 2}
+  activatedMaterial: {fileID: 2100000, guid: 4930c6ffa5b9b9f4098249a43abf8506, type: 2}
+  linkedDoors: []
+  linkedSpawners: []
 --- !u!1 &7403615131844023347
 GameObject:
   m_ObjectHideFlags: 0

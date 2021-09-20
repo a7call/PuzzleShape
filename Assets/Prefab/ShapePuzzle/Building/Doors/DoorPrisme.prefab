@@ -105,6 +105,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 3
+  isButtonActivated: 1
   connectedDoor: {fileID: 7382949480926903947}
 --- !u!1001 &7383126821710990155
 PrefabInstance:

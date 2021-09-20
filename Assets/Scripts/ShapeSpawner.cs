@@ -6,7 +6,9 @@ public class ShapeSpawner : MonoBehaviour
 {
     public GameObject pickUp;
     private GameObject currentPickUp;
-    bool isRespawning; 
+    bool isRespawning;
+
+    public bool isActivated;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,14 +21,14 @@ public class ShapeSpawner : MonoBehaviour
         if (!currentPickUp.activeSelf && !isRespawning)
         {
             StartCoroutine(RespawnPickUp());
-           
         }
 
     }
     void ApparaitreComestible()
     {
-       currentPickUp= Instantiate(pickUp,transform.position,pickUp.transform.rotation);
-
+        currentPickUp = Instantiate(pickUp, transform.position, pickUp.transform.rotation);
+        currentPickUp.transform.parent = this.transform;
+        currentPickUp.GetComponent<PickUp>().ChangeState(isActivated);
     }
 
     IEnumerator RespawnPickUp()
@@ -36,4 +38,13 @@ public class ShapeSpawner : MonoBehaviour
         currentPickUp.SetActive(true);
         isRespawning = false;
     }
+
+
+    public void ToggleState()
+    {
+        isActivated = !isActivated;
+        if (currentPickUp.activeSelf)
+            currentPickUp.GetComponent<PickUp>().ChangeState(isActivated);
+    }
+
 }
