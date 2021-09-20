@@ -19,8 +19,6 @@ public class Button : MonoBehaviour
     {
         baseMaterial = transform.GetChild(0).GetComponent<MeshRenderer>().material;
         animator = GetComponent<Animator>();
-        foreach (var door in linkedDoors)
-            door.GetComponentInChildren<TriggerArea>().isTriggerActivated = false;
     }
     private void OnCollisionEnter(Collision collision)
     {
