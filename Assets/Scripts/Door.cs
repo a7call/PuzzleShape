@@ -17,6 +17,8 @@ public class Door : MonoBehaviour
     public int id;
     public Shapes doorShape;
 
+    public bool isRightDoor;
+
     public Material activatedMaterial;
     private Material baseMaterial;
     void Start()
@@ -43,7 +45,10 @@ public class Door : MonoBehaviour
 
         if (!isOpen && id == this.id)
         {
-            LeanTween.moveLocalY(gameObject, -2.5f, 1f);
+            if(isRightDoor)
+                LeanTween.rotateLocal(this.gameObject, new Vector3(0, 90, 0), 0.5f);
+            else
+                LeanTween.rotateLocal(this.gameObject, new Vector3(0, -90, 0), 0.5f);
             isOpen = true;
         }    
     }
@@ -51,7 +56,10 @@ public class Door : MonoBehaviour
     {
         if (isOpen && id == this.id)
         {
-            LeanTween.moveLocalY(gameObject, 0, 1f);
+            if (isRightDoor)
+                LeanTween.rotateLocal(this.gameObject, new Vector3(0, 0, 0),0.51f);
+            else
+                LeanTween.rotateLocal(this.gameObject, new Vector3(0, 0, 0), 0.51f);
             isOpen = false;
         }      
     }
