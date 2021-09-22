@@ -5,6 +5,7 @@ using UnityEngine;
 public class ShapeSpawner : MonoBehaviour
 {
     public GameObject pickUp;
+    public SpawnFx spawnFx;
     private GameObject currentPickUp;
     bool isRespawning;
 
@@ -12,7 +13,9 @@ public class ShapeSpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        spawnFx = GetComponentInChildren<SpawnFx>();
         ApparaitreComestible();
+
     }
 
     // Update is called once per frame
@@ -29,6 +32,8 @@ public class ShapeSpawner : MonoBehaviour
         currentPickUp = Instantiate(pickUp, transform.position, pickUp.transform.rotation);
         currentPickUp.transform.parent = this.transform;
         currentPickUp.GetComponent<PickUp>().ChangeState(isActivated);
+        if (spawnFx != null)
+            spawnFx.ChangeState(isActivated);
     }
 
     IEnumerator RespawnPickUp()
@@ -44,7 +49,11 @@ public class ShapeSpawner : MonoBehaviour
     {
         isActivated = !isActivated;
         if (currentPickUp.activeSelf)
+        {
             currentPickUp.GetComponent<PickUp>().ChangeState(isActivated);
+            if(spawnFx!= null)
+                spawnFx.ChangeState(isActivated);
+        }          
     }
 
 }
