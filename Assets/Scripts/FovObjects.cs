@@ -1,27 +1,41 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 
 public class FovObjects : MonoBehaviour
 {
-    public Material solidMaterial;
+    private Material solidMaterial;
     public Material transparentMaterial;
-    private MeshRenderer meshRenderer;
+    private List<MeshRenderer> childsMeshs = new List<MeshRenderer>();
     void Start()
     {
-        meshRenderer = GetComponent<MeshRenderer>();
-        meshRenderer.material = solidMaterial;
+        foreach (Transform t in transform)
+        {
+            var mesh = t.GetComponent<MeshRenderer>();
+            childsMeshs.Add(mesh);
+            if (solidMaterial == null)
+                solidMaterial = mesh.material;
+        }
+
     }
 
     public void TurnToSolid()
     {
-        meshRenderer.material = solidMaterial;
+        foreach(var mesh in childsMeshs)
+        {
+            mesh.material = solidMaterial;
+        }
+          
 
     }
 
     public void TurnToTransparent()
     {
-        meshRenderer.material = transparentMaterial;
+        foreach (var mesh in childsMeshs)
+        {
+            mesh.material = transparentMaterial;
+        }
     }
 
 }

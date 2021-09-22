@@ -57,7 +57,12 @@ public class Button : MonoBehaviour
         foreach (var door in linkedDoors)
         {
             var triggerArea = door.GetComponentInChildren<TriggerArea>();
-            door.GetComponentInChildren<Door>().ToggleDoorState(triggerArea);
+            var doors = door.GetComponentsInChildren<Door>();
+            foreach (var d in doors)
+            {
+                d.ToggleDoorState(triggerArea);
+            }
+
         }
 
         foreach (var spanwer in linkedSpawners)

@@ -13,7 +13,7 @@ public class CameraControler : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         offset = new Vector3(12, 12, -12);
-       // offset = transform.position - player.transform.position;
+        // offset = transform.position - player.transform.position;
     }
 
     // Update is called once per frame
@@ -29,40 +29,46 @@ public class CameraControler : MonoBehaviour
     void LookForObjectInFOV()
     {
         float distance = Vector3.Distance(transform.position, player.transform.position);
-        Ray ray = new Ray(transform.position, (player.transform.position -transform.position).normalized);
+        Ray ray = new Ray(transform.position, (player.transform.position - transform.position).normalized);
         var hits = Physics.RaycastAll(ray, distance);
 
-        foreach(var hit in hits)
+        foreach (var hit in hits)
         {
-            if(hit.transform.TryGetComponent(out FovObjects fovObject))
+            if (hit.transform.CompareTag("Wall"))
             {
-                objectInFov.Add(fovObject);
+                var fovObj = hit.transform.GetComponentInParent<FovObjects>();
+                if (fovObj)
+                {
+                    objectInFov.Add(fovObj);
+                }
+
             }
+
         }
     }
 
     void SetWallsToTransparent()
     {
-        foreach(var wall in objectInFov.ToArray())
+        foreach (var wall in objectInFov.ToArray())
         {
             if (!transparentObject.Contains(wall))
             {
                 transparentObject.Add(wall);
                 wall.TurnToTransparent();
-               
+
             }
         }
     }
 
     void SetWallsToSolid()
     {
-        foreach(var fovObject in transparentObject.ToArray())
+        foreach (var fovObject in transparentObject.ToArray())
         {
             if (!objectInFov.Contains(fovObject))
             {
                 transparentObject.Remove(fovObject);
                 fovObject.TurnToSolid();
-                
+
             }
         }
     }
