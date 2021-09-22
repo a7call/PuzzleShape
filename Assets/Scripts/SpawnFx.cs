@@ -14,7 +14,6 @@ public class SpawnFx : MonoBehaviour
     // Update is called once per frame
     internal void ChangeState(bool isActivated)
     {
-        print("tess");
         if (isActivated)
             GetComponent<ParticleSystemRenderer>().material = activatedMaterial;
         else

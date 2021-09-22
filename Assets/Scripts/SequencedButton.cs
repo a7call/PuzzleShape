@@ -6,7 +6,7 @@ using UnityEngine;
 public class SequencedButton : Button
 {
     public int id;
-    private ButtonContainer container;
+    protected ButtonContainer container;
 
     protected override void Start()
     {
@@ -15,22 +15,24 @@ public class SequencedButton : Button
     }
     protected override void OnCollisionEnter(Collision collision)
     {
+        animator.SetTrigger("ButtonPushTrigger");
+        StartCoroutine(RestCo());
+
         if (container.buttons.Contains(gameObject))
             return;
 
         container.buttons.Add(gameObject);
-
-        animator.SetTrigger("ButtonPushTrigger");
-    
-        StartCoroutine(RestCo());
-
+   
         hasBeenPushed = true;
+        SequenceCheck();
 
-        
+    }
 
-        if (id!= container.buttons.IndexOf(gameObject))
+    protected virtual void SequenceCheck()
+    {
+        if (id != container.buttons.IndexOf(gameObject))
         {
-           
+
             foreach (var button in container.buttons)
             {
                 var SqButton = button.GetComponent<SequencedButton>();

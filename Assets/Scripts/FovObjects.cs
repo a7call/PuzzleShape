@@ -10,6 +10,12 @@ public class FovObjects : MonoBehaviour
     private List<MeshRenderer> childsMeshs = new List<MeshRenderer>();
     void Start()
     {
+        if (GetComponent<MeshRenderer>())
+        {
+            childsMeshs.Add(GetComponent<MeshRenderer>());
+            solidMaterial = GetComponent<MeshRenderer>().material;
+        }
+            
         foreach (Transform t in transform)
         {
             var mesh = t.GetComponent<MeshRenderer>();
