@@ -8,11 +8,12 @@ public class TriggerArea : MonoBehaviour
     public bool isTriggerActivated { get; set; }
     public GameObject connectedDoor;
 
-    private void Awake()
-    {      
-        SetTriggerArea(connectedDoor.GetComponent<Door>().isLocked);
+    protected void Awake()
+    {   
+        if(connectedDoor!=null)
+            SetTriggerArea(connectedDoor.GetComponent<Door>().isLocked);
     }
-    private void OnTriggerEnter(Collider other)
+    protected virtual void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
@@ -25,7 +26,7 @@ public class TriggerArea : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit(Collider other)
+    protected void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player"))
             GameEvents.current.DoorwayTriggerExit(id);

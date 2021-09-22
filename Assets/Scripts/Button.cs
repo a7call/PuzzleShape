@@ -5,22 +5,22 @@ using UnityEngine;
 public class Button : MonoBehaviour
 {
     public Material activatedMaterial;
-    private Material baseMaterial;
+    protected Material baseMaterial;
 
-    private Animator animator;
+    protected Animator animator;
 
     public List<GameObject> linkedDoors;
     public List<GameObject> linkedSpawners;
 
-    private bool hasBeenPushed;
-    private bool isResting;
+    protected bool hasBeenPushed;
+    protected bool isResting;
 
-    private void Start()
+    protected virtual void Start()
     {
         baseMaterial = transform.GetChild(0).GetComponent<MeshRenderer>().material;
         animator = GetComponent<Animator>();
     }
-    private void OnCollisionEnter(Collision collision)
+    protected virtual void OnCollisionEnter(Collision collision)
     {
         if (isResting)
             return;
@@ -36,14 +36,14 @@ public class Button : MonoBehaviour
 
 
     }
-    private IEnumerator RestCo()
+    protected IEnumerator RestCo()
     {
         isResting = true;
         yield return new WaitForSeconds(1f);
         isResting = false;
     }
 
-    private void ToggleMecanisme(bool hasBeenPushed)
+    protected virtual void ToggleMecanisme(bool hasBeenPushed)
     {
         if (!hasBeenPushed)
         {
