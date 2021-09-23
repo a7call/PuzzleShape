@@ -2563,7 +2563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buttons: []
-  maxButton: 5
+  maxButton: 6
   shouldOpenDoor: 0
   linkedDoors:
   - {fileID: 246923123}
