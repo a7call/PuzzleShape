@@ -6,6 +6,10 @@ public class SequencedButtonShape : SequencedButton
     public GameObject associatedShape;
     protected override void SequenceCheck()
     {
+        if (associatedShape != null)
+            associatedShape.GetComponent<SequencedShape>().ToggleMecanisme();
+        ToggleMecanisme();
+
         if (id != container.buttons.IndexOf(gameObject))
         {
 
@@ -17,13 +21,8 @@ public class SequencedButtonShape : SequencedButton
             }
             if(associatedShape != null)
                 associatedShape.GetComponent<SequencedShape>().ToggleMecanisme();
+
             container.buttons.Clear();
-        }
-        else
-        {
-            if (associatedShape != null)
-                associatedShape.GetComponent<SequencedShape>().ToggleMecanisme();
-            ToggleMecanisme();
         }
     }
 
