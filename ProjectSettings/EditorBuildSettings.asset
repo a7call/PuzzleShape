@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/SceneMiniGame/MiniGame.unity
     guid: 940907c81ee81ca43aa649caa81dca19
   - enabled: 1
+    path: Assets/SceneMiniGame/MainMenu.unity
+    guid: ba9b6c205e2ed3a48a946c613f86893c
+  - enabled: 1
     path: Assets/SceneMiniGame/SceneValentin.unity
     guid: 0d96787b6abf6f6418005687340a61aa
   m_configObjects: {}

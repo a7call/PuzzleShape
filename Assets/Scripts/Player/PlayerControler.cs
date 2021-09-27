@@ -38,6 +38,11 @@ public class PlayerControler : MonoBehaviour
 
       
     }
+    void OnPause()
+    {
+        PauseMenu.GetInstance().SetGameState();
+    }
+
     private Vector3 IsoVectorConvert(Vector3 vector)
     {
         Quaternion rotation = Quaternion.Euler(0, -45, 0);
