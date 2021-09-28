@@ -30,6 +30,8 @@ public class SequencedButton : Button
 
     protected virtual void SequenceCheck()
     {
+        ToggleMecanisme();
+
         if (id != container.buttons.IndexOf(gameObject))
         {
             foreach (var obj in ToggledObjects)
@@ -39,10 +41,6 @@ public class SequencedButton : Button
                 SqButton.ToggleMecanisme();
             }
             container.buttons.Clear();
-        }
-        else
-        {
-            ToggleMecanisme();
         }
     }
 

@@ -10,13 +10,13 @@ public class ButtonContainer : MonoBehaviour
     [HideInInspector]
     public List<GameObject> buttons = new List<GameObject>();
 
-    private int maxButton;
+    public int maxButton;
 
     private bool shouldOpenDoor;
     // Use this for initialization
     private void Start()
     {
-        maxButton = transform.childCount;
+       // maxButton = transform.childCount;
     }
     private void Update()
     {
