@@ -4541,6 +4541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 246923123}
   buttons: []
+  ToggledObjects: []
   maxButton: 0
 --- !u!1001 &355804295
 PrefabInstance:
@@ -8509,7 +8510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7458510448609778488, guid: 1ae6da75d48a3d6438f18694f3eeaf9f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7458510448609778492, guid: 1ae6da75d48a3d6438f18694f3eeaf9f, type: 3}
       propertyPath: m_RootOrder
@@ -11600,6 +11601,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e383171a05694c54180bb8cb3285db6c, type: 3}
+--- !u!1 &1088315632 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7134335679928854272, guid: 986ffbbd9f390f646a0edc3a8ed0d55e, type: 3}
+  m_PrefabInstance: {fileID: 101457868}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &1088315633
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1088315632}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: bef94c75514300347a74498742c666af, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: bef94c75514300347a74498742c666af, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1001 &1088845460
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13155,6 +13177,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 0}
   buttons: []
+  ToggledObjects: []
   maxButton: 0
 --- !u!1001 &1204258137
 PrefabInstance:
@@ -18052,7 +18075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7458510448609778488, guid: 1ae6da75d48a3d6438f18694f3eeaf9f, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7458510448609778492, guid: 1ae6da75d48a3d6438f18694f3eeaf9f, type: 3}
       propertyPath: m_RootOrder
@@ -18220,6 +18243,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 959230551}
   buttons: []
+  ToggledObjects: []
   maxButton: 0
 --- !u!4 &1690657992 stripped
 Transform:
@@ -18279,6 +18303,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   door: {fileID: 8382638361563577857}
   buttons: []
+  ToggledObjects: []
   maxButton: 0
 --- !u!1001 &1714413065
 PrefabInstance:
