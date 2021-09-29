@@ -6,7 +6,7 @@ public class SpawnFx : MonoBehaviour
 {
     public Material unActivatedMaterial;
     private Material activatedMaterial;
-    void Start()
+    void Awake()
     {
         activatedMaterial = GetComponent<ParticleSystemRenderer>().material;
     }

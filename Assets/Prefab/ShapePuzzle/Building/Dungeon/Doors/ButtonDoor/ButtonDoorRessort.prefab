@@ -1,12 +1,12 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &3011444612903284038
+--- !u!114 &3011444614053570284
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3011444614394544836}
+  m_GameObject: {fileID: 3011444613138808037}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d8e066d1d3d32b47b8ef70aaaf9b60d, type: 3}
@@ -15,7 +15,7 @@ MonoBehaviour:
   isLocked: 0
   id: 5
   doorShape: 3
-  isRightDoor: 0
+  isRightDoor: 1
   activatedMaterial: {fileID: 2100000, guid: a5ff8b3090989844cb5bd26a24bf84d4, type: 2}
 --- !u!1 &3011444613256620491
 GameObject:
@@ -51,13 +51,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
---- !u!114 &3011444614053570284
+--- !u!114 &3011444612903284038
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3011444613138808037}
+  m_GameObject: {fileID: 3011444614394544836}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d8e066d1d3d32b47b8ef70aaaf9b60d, type: 3}
@@ -66,7 +66,7 @@ MonoBehaviour:
   isLocked: 0
   id: 5
   doorShape: 3
-  isRightDoor: 1
+  isRightDoor: 0
   activatedMaterial: {fileID: 2100000, guid: a5ff8b3090989844cb5bd26a24bf84d4, type: 2}
 --- !u!1 &3011444614554601571
 GameObject:
@@ -272,7 +272,7 @@ PrefabInstance:
     - target: {fileID: 23779832972469770, guid: 3a0bdc51b03761a4ebbd09ceda5d2d1f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6968e89851431104b8f931c37d69356b, type: 2}
+      objectReference: {fileID: 2100000, guid: a733026e99c713d49a49c301671af74c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a0bdc51b03761a4ebbd09ceda5d2d1f, type: 3}
 --- !u!4 &3015795810915285836 stripped

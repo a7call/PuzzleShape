@@ -59,23 +59,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.3317728, y: 1.3274126, z: 5.1881943}
   m_Center: {x: -1.1658859, y: 0.1637063, z: -0.08091354}
---- !u!114 &3767473271539449527
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3767473272011552752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d8e066d1d3d32b47b8ef70aaaf9b60d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  isLocked: 0
-  id: 3
-  doorShape: 0
-  isRightDoor: 0
-  activatedMaterial: {fileID: 2100000, guid: a5ff8b3090989844cb5bd26a24bf84d4, type: 2}
 --- !u!1 &3767473271546914088
 GameObject:
   m_ObjectHideFlags: 0
@@ -126,6 +109,23 @@ MonoBehaviour:
   id: 3
   doorShape: 0
   isRightDoor: 1
+  activatedMaterial: {fileID: 2100000, guid: a5ff8b3090989844cb5bd26a24bf84d4, type: 2}
+--- !u!114 &3767473271539449527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3767473272011552752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d8e066d1d3d32b47b8ef70aaaf9b60d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isLocked: 0
+  id: 3
+  doorShape: 0
+  isRightDoor: 0
   activatedMaterial: {fileID: 2100000, guid: a5ff8b3090989844cb5bd26a24bf84d4, type: 2}
 --- !u!1001 &3767473271560674536
 PrefabInstance:
@@ -197,7 +197,7 @@ PrefabInstance:
     - target: {fileID: 23768506325093962, guid: 2497c47670e702543a4c20c4c442311f, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 6968e89851431104b8f931c37d69356b, type: 2}
+      objectReference: {fileID: 2100000, guid: a733026e99c713d49a49c301671af74c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2497c47670e702543a4c20c4c442311f, type: 3}
 --- !u!4 &3771965033229708738 stripped
