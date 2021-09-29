@@ -13,20 +13,17 @@ public abstract class Button : MonoBehaviour, IToggleObject
     protected bool hasBeenPushed;
     protected bool isResting;
 
-    public List<GameObject> ToggledObjects;
+    public List<GameObject> ObjectsToToggle;
 
     protected virtual void Start()
     {
-        ToggledObjects.Add(this.gameObject);
+        ObjectsToToggle.Add(this.gameObject);
         baseMaterial = transform.GetChild(0).GetComponent<MeshRenderer>().material;
         animator = GetComponent<Animator>();
     }
 
     protected virtual void OnCollisionEnter(Collision collision)
     {
-        if (isResting)
-            return;
-
         animator.SetTrigger("ButtonPushTrigger");
         StartCoroutine(RestCo());
     }
@@ -46,8 +43,11 @@ public abstract class Button : MonoBehaviour, IToggleObject
 
     protected IEnumerator RestCo()
     {
+        if (isResting)
+            yield break;
+
         isResting = true;
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(0.3f);
         isResting = false;
     }
 }

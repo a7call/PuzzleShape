@@ -8,20 +8,21 @@ public class SequencedButtonShape : SequencedButton
     {
         if (associatedShape != null)
             associatedShape.GetComponent<SequencedShape>().ToggleMecanisme();
-        ToggleMecanisme();
 
+
+        container.ToggledObjects.Add(associatedShape.gameObject);
+        container.ToggledObjects.Add(this.gameObject);
+
+        ToggleMecanisme();
+ 
         if (id != container.buttons.IndexOf(gameObject))
         {
-
-            foreach (var button in container.buttons)
+            foreach (var obj in container.ToggledObjects)
             {
-                var SqButton = button.GetComponent<SequencedButtonShape>();
-                SqButton.hasBeenPushed = false;
+                var SqButton = obj.GetComponent<IToggleObject>();
                 SqButton.ToggleMecanisme();
             }
-            if(associatedShape != null)
-                associatedShape.GetComponent<SequencedShape>().ToggleMecanisme();
-
+            container.ToggledObjects.Clear();
             container.buttons.Clear();
         }
     }

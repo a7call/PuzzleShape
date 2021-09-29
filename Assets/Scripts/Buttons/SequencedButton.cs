@@ -14,10 +14,13 @@ public class SequencedButton : Button
     {
         base.Start();
         container = GetComponentInParent<ButtonContainer>();
-        ToggledObjects.AddRange(container.buttons);
+        ObjectsToToggle.AddRange(container.buttons);
     }
     protected override void OnCollisionEnter(Collision collision)
     {
+        if (isResting)
+            return;
+
         base.OnCollisionEnter(collision);
 
         if (container.buttons.Contains(gameObject))
@@ -32,14 +35,15 @@ public class SequencedButton : Button
     {
         ToggleMecanisme();
 
+        container.ToggledObjects.Add(this.gameObject);
         if (id != container.buttons.IndexOf(gameObject))
         {
-            foreach (var obj in ToggledObjects)
+            foreach (var obj in container.ToggledObjects)
             {
                 var SqButton = obj.GetComponent<IToggleObject>();
-                
                 SqButton.ToggleMecanisme();
             }
+            container.ToggledObjects.Clear();
             container.buttons.Clear();
         }
     }

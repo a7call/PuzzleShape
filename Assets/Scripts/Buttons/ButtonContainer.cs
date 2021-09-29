@@ -9,6 +9,8 @@ public class ButtonContainer : MonoBehaviour
 
     [HideInInspector]
     public List<GameObject> buttons = new List<GameObject>();
+    [HideInInspector]
+    public List<GameObject> ToggledObjects = new List<GameObject>();
 
     public int maxButton;
 

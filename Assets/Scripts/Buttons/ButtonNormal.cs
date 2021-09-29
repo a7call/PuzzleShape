@@ -6,7 +6,10 @@ public class ButtonNormal : Button
 {
     protected override void OnCollisionEnter(Collision collision)
     {
+        if (isResting)
+            return;
         base.OnCollisionEnter(collision);
+ 
         ToggleButton();
         hasBeenPushed = !hasBeenPushed;
     }
@@ -15,7 +18,7 @@ public class ButtonNormal : Button
     {
         base.ToggleButton();
 
-        foreach (var obj in ToggledObjects)
+        foreach (var obj in ObjectsToToggle)
         {
             var ToggleObjs = obj.GetComponentsInChildren<IToggleObject>();
             foreach(var toggleObj in ToggleObjs)

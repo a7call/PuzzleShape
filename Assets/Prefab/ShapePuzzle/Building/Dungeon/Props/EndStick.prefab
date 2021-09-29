@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 7149538442240674975}
   - component: {fileID: 7149538442242047499}
   - component: {fileID: 7195915923144634311}
+  - component: {fileID: 1276735534791208400}
+  - component: {fileID: 2310888915562434444}
   m_Layer: 0
   m_Name: EndStick
   m_TagString: Untagged
@@ -98,6 +100,31 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 43180043946635588, guid: f04dfdd221012bd4ab4995cdc164ad65, type: 2}
+--- !u!65 &1276735534791208400
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7149538442243787137}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9377975, y: 0.37805176, z: 2.5663452}
+  m_Center: {x: 0.15875626, y: 0.099227905, z: -0.13217926}
+--- !u!114 &2310888915562434444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7149538442243787137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5ef0609c6c35a4eaaafb12dbb36757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7149538442585487599
 PrefabInstance:
   m_ObjectHideFlags: 0
