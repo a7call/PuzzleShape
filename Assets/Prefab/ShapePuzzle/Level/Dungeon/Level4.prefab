@@ -665,18 +665,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &718832041929281154
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2847535459940709665}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ce5ef0609c6c35a4eaaafb12dbb36757, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &8298068123409011222
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -690,6 +678,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.1939344, y: 0.52774215, z: 2.7268233}
   m_Center: {x: 0.09490681, y: 0.1740731, z: 0.33307528}
+--- !u!114 &718832041929281154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2847535459940709665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce5ef0609c6c35a4eaaafb12dbb36757, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2847535459992807637
 GameObject:
   m_ObjectHideFlags: 0
@@ -2265,6 +2265,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
       propertyPath: ToggledObjects.Array.data[0]
       value: 
       objectReference: {fileID: 2847535458975693120}
@@ -2288,6 +2292,22 @@ PrefabInstance:
       propertyPath: linkedSpawners.Array.data[1]
       value: 
       objectReference: {fileID: 8810804477897378461, guid: da0bebc320869fb4ab20fd8805dc4b5b, type: 3}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.data[0]
+      value: 
+      objectReference: {fileID: 2847535458975693120}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.data[1]
+      value: 
+      objectReference: {fileID: 6890077754791955388}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.data[2]
+      value: 
+      objectReference: {fileID: 6028225906469092402}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.data[3]
+      value: 
+      objectReference: {fileID: 1933207780346328176}
     - target: {fileID: 7403424610271464945, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
       propertyPath: m_Name
       value: Button (1)
@@ -2602,6 +2622,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1038842851941400728, guid: da0bebc320869fb4ab20fd8805dc4b5b, type: 3}
     - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
       propertyPath: ToggledObjects.Array.data[0]
       value: 
       objectReference: {fileID: 6890077754791955388}
@@ -2617,6 +2641,18 @@ PrefabInstance:
       propertyPath: ToggledObjects.Array.data[3]
       value: 
       objectReference: {fileID: 2847535458109421111}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.data[0]
+      value: 
+      objectReference: {fileID: 2847535458975693120}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.data[1]
+      value: 
+      objectReference: {fileID: 2847535458109421111}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.data[2]
+      value: 
+      objectReference: {fileID: 6890077754791955388}
     - target: {fileID: 7403424610271464945, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
       propertyPath: m_Name
       value: Button
