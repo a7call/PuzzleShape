@@ -298,8 +298,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.0002499, z: 10}
-  m_Center: {x: 0, y: 0.50012493, z: -0.49514198}
+  m_Size: {x: 0.47695923, y: 1.350441, z: 10}
+  m_Center: {x: -10.472488, y: 0.6301594, z: -0.49514198}
 --- !u!1 &9097576367255666900
 GameObject:
   m_ObjectHideFlags: 0
@@ -342,8 +342,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 2.0002499, z: 20}
-  m_Center: {x: 0, y: 0.50012493, z: -0.49514198}
+  m_Size: {x: 1, y: 2.0002499, z: 10.132889}
+  m_Center: {x: -2.0303034e-14, y: 0.50012493, z: -5.428698}
 --- !u!1 &9097576367289939257
 GameObject:
   m_ObjectHideFlags: 0
@@ -606,7 +606,15 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
       propertyPath: ToggledObjects.Array.data[0]
+      value: 
+      objectReference: {fileID: 457984933100753303}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.data[0]
       value: 
       objectReference: {fileID: 457984933100753303}
     - target: {fileID: 7403424610271464945, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
@@ -818,11 +826,23 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
       propertyPath: ToggledObjects.Array.data[0]
       value: 
       objectReference: {fileID: 5335029960624755364}
     - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
       propertyPath: ToggledObjects.Array.data[1]
+      value: 
+      objectReference: {fileID: 751503473310596353}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.data[0]
+      value: 
+      objectReference: {fileID: 5335029960624755364}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.data[1]
       value: 
       objectReference: {fileID: 751503473310596353}
     - target: {fileID: 7403424610271464945, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
@@ -1443,7 +1463,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8984483863205980230, guid: a26c964eeceb7fc448375230db09d301, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -10.674049
+      value: -10.8569565
       objectReference: {fileID: 0}
     - target: {fileID: 8984483863205980230, guid: a26c964eeceb7fc448375230db09d301, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1510,7 +1530,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7134335679928854279, guid: 986ffbbd9f390f646a0edc3a8ed0d55e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.674049
+      value: -14.8569565
       objectReference: {fileID: 0}
     - target: {fileID: 7134335679928854279, guid: 986ffbbd9f390f646a0edc3a8ed0d55e, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1580,7 +1600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3718721865694456535, guid: 2b60dc85f85049e4880f0ac6752e088c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -17.838661
+      value: -18.033699
       objectReference: {fileID: 0}
     - target: {fileID: 3718721865694456535, guid: 2b60dc85f85049e4880f0ac6752e088c, type: 3}
       propertyPath: m_LocalPosition.y

@@ -27,8 +27,8 @@ EditorBuildSettings:
     path: Assets/SceneMiniGame/Levels/Level3.unity
     guid: 8f7f3d3adf2acfe4da5e685058be8a91
   - enabled: 1
-    path: Assets/SceneMiniGame/Levels/Level4.unity
-    guid: b60f5d9a7bb35044d902b200f08659fe
+    path: Assets/SceneMiniGame/Levels/LevelSocier.unity
+    guid: f0956327d72378848b364cdbc2d16027
   - enabled: 1
     path: Assets/SceneMiniGame/Levels/Level5.unity
     guid: baf35d61e35d5dd4b89a7807a9a47ffd
