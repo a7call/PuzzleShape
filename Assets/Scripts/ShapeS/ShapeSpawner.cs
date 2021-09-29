@@ -5,7 +5,7 @@ using UnityEngine;
 public class ShapeSpawner : MonoBehaviour, IToggleObject
 {
     public GameObject pickUp;
-    public SpawnFx spawnFx;
+    private SpawnFx spawnFx;
     private GameObject currentPickUp;
     bool isRespawning;
 
@@ -49,11 +49,13 @@ public class ShapeSpawner : MonoBehaviour, IToggleObject
     public void ToggleMecanisme()
     {
         isActivated = !isActivated;
+        if (spawnFx != null)
+            spawnFx.ChangeState(isActivated);
+
         if (currentPickUp.activeSelf)
         {
             currentPickUp.GetComponent<PickUp>().ChangeState(isActivated);
-            if(spawnFx!= null)
-                spawnFx.ChangeState(isActivated);
+            
         }          
     }
 
