@@ -42,7 +42,8 @@ public class Door : MonoBehaviour, IToggleObject
                 LeanTween.rotateLocal(this.gameObject, new Vector3(0, 90, 0), 0.5f);
             else
                 LeanTween.rotateLocal(this.gameObject, new Vector3(0, -90, 0), 0.5f);
-        }    
+        }
+        GetComponent<Collider>().enabled = false;
     }
     private void OnDoorWayClose(int id)
     {
@@ -53,6 +54,7 @@ public class Door : MonoBehaviour, IToggleObject
             else
                 LeanTween.rotateLocal(this.gameObject, new Vector3(0, 0, 0), 0.51f);
         }
+        GetComponent<Collider>().enabled = true;
     }
 
     public void ToggleMecanisme()

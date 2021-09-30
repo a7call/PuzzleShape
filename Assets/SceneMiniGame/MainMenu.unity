@@ -2210,6 +2210,105 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 889334600}
   m_CullTransparentMesh: 1
+--- !u!1 &890598915
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 890598918}
+  - component: {fileID: 890598917}
+  m_Layer: 0
+  m_Name: MusicManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &890598917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890598915}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c8ec38771ff2e84288ee29e7651fa2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixerGroup: {fileID: 24300002, guid: d12dc439f1b35c14b81574aff8cbdcf9, type: 2}
+  sounds:
+  - name: Music1
+    clip: {fileID: 8300000, guid: 49f69c43507231944a32b21084b8dd3c, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: d12dc439f1b35c14b81574aff8cbdcf9, type: 2}
+    source: {fileID: 0}
+  - name: Music2
+    clip: {fileID: 8300000, guid: 1a1adaabb3e053b43980dcad4d714366, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: d12dc439f1b35c14b81574aff8cbdcf9, type: 2}
+    source: {fileID: 0}
+  - name: Music3
+    clip: {fileID: 8300000, guid: 595788d8315419643be5ffbd04f10279, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: d12dc439f1b35c14b81574aff8cbdcf9, type: 2}
+    source: {fileID: 0}
+  - name: Music4
+    clip: {fileID: 8300000, guid: 4809b042ca4c55c48b4bbe9c903883f7, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: d12dc439f1b35c14b81574aff8cbdcf9, type: 2}
+    source: {fileID: 0}
+  - name: Music5
+    clip: {fileID: 8300000, guid: ec4d4d5d23585254e803d731bbf75e06, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: d12dc439f1b35c14b81574aff8cbdcf9, type: 2}
+    source: {fileID: 0}
+  - name: Music6
+    clip: {fileID: 8300000, guid: 905b69dcf180f544d8bc986b69f5b122, type: 3}
+    volume: 0.1
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: d12dc439f1b35c14b81574aff8cbdcf9, type: 2}
+    source: {fileID: 0}
+--- !u!4 &890598918
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 890598915}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -212.3905, y: -16.17276, z: 39.878784}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &940144217
 GameObject:
   m_ObjectHideFlags: 0
