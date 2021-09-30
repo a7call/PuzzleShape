@@ -107,6 +107,7 @@ GameObject:
   - component: {fileID: 7195915923144634311}
   - component: {fileID: 1276735534791208400}
   - component: {fileID: 2310888915562434444}
+  - component: {fileID: 2011937496546863909}
   m_Layer: 0
   m_Name: EndStick
   m_TagString: Untagged
@@ -219,6 +220,139 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce5ef0609c6c35a4eaaafb12dbb36757, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  victorySounds:
+  - name: Victory1
+    clip: {fileID: 8300000, guid: c9d9185a5e57b854b9b8553453d24564, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: d12dc439f1b35c14b81574aff8cbdcf9, type: 2}
+    source: {fileID: 0}
+  - name: Victory2
+    clip: {fileID: 8300000, guid: 2dba7d45256d4ed4187283d46f3a6bac, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: d12dc439f1b35c14b81574aff8cbdcf9, type: 2}
+    source: {fileID: 0}
+  - name: Victory3
+    clip: {fileID: 8300000, guid: 8f0704be47fad03419c0a6a6c288b1a3, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: d12dc439f1b35c14b81574aff8cbdcf9, type: 2}
+    source: {fileID: 0}
+  - name: Victory4
+    clip: {fileID: 8300000, guid: f5b1a259960fac04188a5d6f4a88fb41, type: 3}
+    volume: 0.2
+    volumeVariance: 0
+    pitch: 1
+    pitchVariance: 0
+    loop: 0
+    mixerGroup: {fileID: 24300002, guid: d12dc439f1b35c14b81574aff8cbdcf9, type: 2}
+    source: {fileID: 0}
+--- !u!82 &2011937496546863909
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7149538442243787137}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: d12dc439f1b35c14b81574aff8cbdcf9, type: 2}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1001 &7149538442585487599
 PrefabInstance:
   m_ObjectHideFlags: 0

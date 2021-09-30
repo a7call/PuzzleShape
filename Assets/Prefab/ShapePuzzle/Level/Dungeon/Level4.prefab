@@ -2485,7 +2485,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
       propertyPath: ObjectsToToggle.Array.size
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
       propertyPath: ToggledObjects.Array.data[0]
@@ -2522,7 +2522,7 @@ PrefabInstance:
     - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
       propertyPath: ObjectsToToggle.Array.data[2]
       value: 
-      objectReference: {fileID: 6028225906469092402}
+      objectReference: {fileID: 1933207780346328176}
     - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
       propertyPath: ObjectsToToggle.Array.data[3]
       value: 
@@ -2763,7 +2763,7 @@ PrefabInstance:
       objectReference: {fileID: 1038842851941400728, guid: da0bebc320869fb4ab20fd8805dc4b5b, type: 3}
     - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
       propertyPath: ObjectsToToggle.Array.size
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
       propertyPath: ToggledObjects.Array.data[0]
@@ -2793,6 +2793,10 @@ PrefabInstance:
       propertyPath: ObjectsToToggle.Array.data[2]
       value: 
       objectReference: {fileID: 6890077754791955388}
+    - target: {fileID: 7402322960146217589, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
+      propertyPath: ObjectsToToggle.Array.data[3]
+      value: 
+      objectReference: {fileID: 6028225906469092402}
     - target: {fileID: 7403424610271464945, guid: 23bd4e86d4571f54d96c6b2570357062, type: 3}
       propertyPath: m_Name
       value: Button
