@@ -31,10 +31,15 @@ public class EndStick : MonoBehaviour
     {
         int i = Random.Range(0, victorySounds.Length - 1);
         source.volume = victorySounds[i].volume;
+
         MusicManager.GetInstance().CurrentlyPlayingSound.source.volume /= 2;
+
         source.PlayOneShot(victorySounds[i].clip);
-        
+        var ps = GetComponentInChildren<ParticleSystem>();
+        ps.Play();        
         yield return new WaitForSeconds(victorySounds[i].clip.length);
+        ps.Stop();
+
 
         MusicManager.GetInstance().CurrentlyPlayingSound.source.volume *= 2;
 
