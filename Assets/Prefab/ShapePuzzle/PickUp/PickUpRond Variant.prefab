@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PickUpRond Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 2973105633734628946, guid: 29cc50b48eb7ee84db7623e3d6e3e8b0, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a733026e99c713d49a49c301671af74c, type: 2}
     - target: {fileID: 2973105633734628947, guid: 29cc50b48eb7ee84db7623e3d6e3e8b0, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -66,10 +70,10 @@ PrefabInstance:
     - target: {fileID: 2973105633734628949, guid: 29cc50b48eb7ee84db7623e3d6e3e8b0, type: 3}
       propertyPath: activatedMat
       value: 
-      objectReference: {fileID: 2100000, guid: 6968e89851431104b8f931c37d69356b, type: 2}
+      objectReference: {fileID: 2100000, guid: a733026e99c713d49a49c301671af74c, type: 2}
     - target: {fileID: 2973105633734628949, guid: 29cc50b48eb7ee84db7623e3d6e3e8b0, type: 3}
       propertyPath: unActivatedMat
       value: 
-      objectReference: {fileID: 2100000, guid: 2425c03ff18262a4eaa45371f0fe6dcf, type: 2}
+      objectReference: {fileID: 2100000, guid: 17ded0f87b316cb4b953b63cb016cf8c, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 29cc50b48eb7ee84db7623e3d6e3e8b0, type: 3}
