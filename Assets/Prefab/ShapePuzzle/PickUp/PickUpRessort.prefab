@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6968e89851431104b8f931c37d69356b, type: 2}
+  - {fileID: 2100000, guid: a733026e99c713d49a49c301671af74c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -110,5 +110,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shape: 3
-  unActivatedMat: {fileID: 2100000, guid: 2425c03ff18262a4eaa45371f0fe6dcf, type: 2}
-  activatedMat: {fileID: 2100000, guid: 6968e89851431104b8f931c37d69356b, type: 2}
+  unActivatedMat: {fileID: 2100000, guid: 17ded0f87b316cb4b953b63cb016cf8c, type: 2}
+  activatedMat: {fileID: 2100000, guid: a733026e99c713d49a49c301671af74c, type: 2}
